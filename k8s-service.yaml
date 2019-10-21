@@ -6,6 +6,6 @@ spec:
   type: NodePort
   ports:
     - port: 80  # image, 程式啟動時的port
-      nodePort: 80  # 外面接近來的port
+      nodePort: 32750  # 外面接近來的port
   selector:
     app: k8s-jenkins
