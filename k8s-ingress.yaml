@@ -12,4 +12,4 @@ spec:
       paths:
       - backend:
           serviceName: k8s-swagger-service
-          servicePort: 7000
+          servicePort: 80
