@@ -12,6 +12,9 @@ spec:
       labels:
         app: k8s-jenkins
     spec:
+      volumes:
+      - name: k8s-jenkins-volume
+        emptyDir: {}
       containers:
       - name: k8s-jenkins
         image: ohya/swagger2-deploy
@@ -23,3 +26,6 @@ spec:
         ports:
         - containerPort: 80
 #      restartPolicy: Always
+        volumeMounts:
+          - name: k8s-jenkins-volume
+            mountPath: /tmp/volume
